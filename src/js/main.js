@@ -1,11 +1,11 @@
 require('../index.html')
-require('../css/main.scss')
+require('../css/package.scss')
 
 require('zepto.js/src/detect.js')
 require('zepto.js/src/fx.js')
 require('zepto.js/src/fx_methods.js')
-var makeVideoPlayableInline = require('iphone-inline-video')
 
+var makeVideoPlayableInline = require('iphone-inline-video')
 var $tip = $('.tip')
 
 /**
@@ -36,17 +36,17 @@ if (TBS) {
 }
 
 if (TBS) {
-  $tip.append('TBS:' + TBS[0] + ' | ' + TBS[1] + '<br>')
+  $tip.append('TBS: ' + TBS[0] + ' | ' + TBS[1] + '<br>')
 } else {
-  $tip.append('TBS:' + TBS + '<br>')
+  $tip.append('TBS: ' + TBS + '<br>')
 }
 if (QQB) {
-  $tip.append('MQQBrowser:' + QQB[0] + ' | ' + QQB[1] + '<br>')
+  $tip.append('MQQBrowser: ' + QQB[0] + ' | ' + QQB[1] + '<br>')
 } else {
-  $tip.append('MQQBrowser:' + QQB + '<br>')
+  $tip.append('MQQBrowser: ' + QQB + '<br>')
 }
 
-function useH5Play() {
+function useH5Play () {
   $('#video').attr('x5-video-player-type', 'h5')
   $('#video').attr('x5-video-player-fullscreen', 'true')
 }
@@ -177,13 +177,11 @@ $('.replay').on('touchstart', function () {
 
 
 // 计算 wrapper 的 margin-top 值，视频以宽度为基准居中播放
-function handleResize() {
+function handleResize () {
   var sWidth = 9
   var sHeight = 16
   var width = window.innerWidth
   var height = window.innerHeight
-
-  // window.alert('resize:' + width + ':' + height)
 
   var marginTop = height - (width * sHeight) / sWidth
   marginTop = Math.round(marginTop)

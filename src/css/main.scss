@@ -1,7 +1,6 @@
-@charset "UTF-8";
-@import "./mixin.scss";
-@import "./base.css";
-
+/**
+ * Main Page
+ */
 $bg: #000;
 
 .IIV::-webkit-media-controls-play-button,
@@ -19,14 +18,14 @@ body {
 .loading,
 .main,
 .end {
-  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   background-color: $bg;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -34,17 +33,17 @@ body {
 .main {
   display: none;
   background-color: $bg;
-  .wrapper {
-    .video.show {
-      width: 100%;
-      height: 100%;
-    }
+
+  .wrapper .video.show {
+    width: 100%;
+    height: 100%;
   }
   .control {
     position: absolute;
     height: 20%;
     width: 100%;
     bottom: 0;
+
     .btn {
       display: none;
     }
@@ -70,13 +69,15 @@ body {
   padding: 20px 40px;
   border: 1PX solid white;
   color: white;
+  font-size: 28px;
 }
 
 .tip {
   position: fixed;
-  top: 200px;
-  right: 20px;
+  top: 30px;
+  left: 30px;
+  padding: 16px;
+  color: white;
   font-size: 14PX;
   background: black;
-  color: white;
 }
