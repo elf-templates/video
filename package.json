@@ -7,7 +7,7 @@
     "build": "elf build"
   },
   "dependencies": {
-    "iphone-inline-video": "1.9.4",
-    "zepto.js": "1.1.6"
+    "iphone-inline-video": "^1.9.4",
+    "zepto.js": "^1.1.6"
   }
 }
